@@ -1,26 +1,26 @@
 package ru.geekbrains.samples.controller;
 
-import ru.geekbrains.samples.dao.SampleBeanDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import ru.geekbrains.samples.dao.NowBeanDAO;
 
 @Controller
-public class SampleController {
+public class NowController {
 
-	private final SampleBeanDAO sampleBeanDAO;
+	private final NowBeanDAO nowBeanDAO;
 
 	@Autowired
-	public SampleController(SampleBeanDAO sampleBeanDAO) {
-		this.sampleBeanDAO = sampleBeanDAO;
+	public NowController(NowBeanDAO nowBeanDAO){
+		this.nowBeanDAO = nowBeanDAO;
 	}
 
-	@RequestMapping(value = "/sample", method = RequestMethod.GET)
+	@RequestMapping(value = "/now", method = RequestMethod.GET)
 	public String getAllEmployees(Model model) {
-		model.addAttribute("sample", sampleBeanDAO.getText());
-		return "sample";
+		model.addAttribute("now", nowBeanDAO.getNow());
+		return "now";
 	}
 
 }

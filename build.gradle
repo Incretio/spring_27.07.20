@@ -17,8 +17,8 @@ def springVersion = "5.2.3.RELEASE"
 
 dependencies {
 
-	compileOnly 'org.projectlombok:lombok:1.18.12'
-	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+	compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
 	implementation "org.springframework:spring-webmvc:${springVersion}"
 	implementation "org.springframework:spring-web:${springVersion}"
