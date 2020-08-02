@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>GeekBrains - Students list</title>
+    </head>
+    <body>
+        <h1>Students list:</h1>
+        <table>
+            <thead>
+            <tr>
+                <th> id </th>
+                <th> name </th>
+                <th> score </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${students}">
+                <td><span th:text="${student.id}"> id </span></td>
+                <td><span th:text="${student.name}"> name </span></td>
+                <td><span th:text="${student.score}"> score </span></td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
