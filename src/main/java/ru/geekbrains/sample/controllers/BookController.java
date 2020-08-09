@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ru.geekbrains.sample.dao.BookService;
+import ru.geekbrains.sample.services.BookService;
 import ru.geekbrains.sample.dto.BookDTO;
 
 @RestController

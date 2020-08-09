@@ -1,9 +1,9 @@
-package ru.geekbrains.sample.dao;
+package ru.geekbrains.sample.services;
 
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Service;
-
+import ru.geekbrains.sample.dao.BookRepository;
 import ru.geekbrains.sample.dto.BookDTO;
 import ru.geekbrains.sample.persistence.entity.Book;
 
