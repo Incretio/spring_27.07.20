@@ -6,14 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import java.util.Date;
-import java.util.UUID;
 
 @Data
 @Entity
 public class Book {
 
     @Id
-    public UUID id;
+    public int id;
 
     public String name;
 
@@ -22,5 +21,7 @@ public class Book {
     public String description;
 
     public boolean available;
+
+    public double price;
 
 }
